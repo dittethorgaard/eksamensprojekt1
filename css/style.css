@@ -1,34 +1,41 @@
+/* / <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+
 /* Definerer de mest brugte farver og andre elementer i koden */
 :root {
-    --skriftfarve: #000;
-    --primaer-lyseroed: #f9CBCE;
-    --sekundaer-lyseroed: #DfADB0;
-    --sekundaer-moerk-lyseroed: #C78D91;  
-    --primaer-gul: #FFF3A4;
-    --sekundaer-gul: #DFD381;
-    --sekundaer-moerk-gul: #CCC06E;
+    --sort: #000;
+    --hvid: #ffffff;
+    --navigationsbar: #ffffff;
 }
 
 a {
     text-decoration: none; /* fjerner streger under links */
     color: inherit; /* fjerner den blå farve i links */
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
+    font-family: "Montserrat", sans-serif;
 }
 
-body {
-    background-color: var(--primaer-lyseroed);
-}
 
+/* Basic stylings - generelt for html */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--skriftfarve);
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
+
+
 /*------------------------------------------*/
 
 /* FUNKTIONER / STYLING AF NAVIGATIONSBAR */
@@ -37,9 +44,10 @@ body {
 nav {
     font-weight: 300;
     position: fixed; /* sikrer at nav følger skærmen, når der scrolles nedad */
-    width: 100%; 
+    width: 100%; /* Fylder hele skærmen ud */
     top: 0; /* Placerer navigationen øverst på skærmen */
     z-index: 999; /* Høj z-index-værdi for at sikre, at det vises over andre elementer */
+    background-color: var(--navigationsbar);
 }
 
 /* styling af den egentlige checkboks */
@@ -47,20 +55,19 @@ nav {
     display: none; /* fjerner den aktuelle checkboks fra syne*/
 }
 
-/* placering af burgermenu - bar-img */
+/* placering af burgermenu - bar */
 .nav-toggle {
     position: absolute;
     cursor: pointer;
     margin: 0rem 1rem;
-    right: 0; /* placerer img helt til højre */
+    right: 0; /* placerer elementet helt til højre */
     z-index: 1000; /* Sørger for, at burgermenu-ikonet vises over alt andet */
 }
 
-/* styling af burgermenu - bar-img */
+/* styling af burgermenu - bar */
 .menu {
-    width: 3.8rem; /* størrelse på img */
-    margin: 0.4rem; /* placering af img fra top */
-    right: 0;
+    margin: 1.5rem 1rem 1rem 1rem; /* placering af bar fra top */
+    right: 0; /* placerer elementet helt til højre */
     position: relative;
 }
 
@@ -68,71 +75,39 @@ nav {
 .nav-menu {
     display: flex;
     flex-direction: column; /* elementer på række - mobil view*/
-    right: 0;
-    margin: 0.7rem; 
+    right: 0; /* placerer elementet helt til højre */
+    margin: 0.7rem; /* Giver luft omkring */
     margin-bottom: 0; /* fjerner margin i bund */
-    z-index: 100;
+    z-index: 1000;
 }
 
 /* funktionalitet af burgermenu - bar-img */
 #nav-checkbox:checked ~ ul.nav-menu li {
-    display: block; /*kalder på liste elementerne, når der trykkes på bar-img */
+    display: block; /*kalder på liste elementerne, når der trykkes på bar */
 }
 
 /* styling af klik på links i nav */
 a:active {
-    background-color: var(--sekundaer-lyseroed); /* 
-   giver aktiverede links en mørkere baggrundsfarve:*/
+    background-color: var(--hvid); /* giver aktiverede links en mørkere baggrundsfarve:*/
 }
 
-/* Justerer positionen af dropdown-lister */
-.dropdown {
-    position: absolute;
-    right: 0; /* Højrestiller dropdown-listen */
-    width: auto /* Definerer bredden af dropdown-listen */
-}
-
-/* layout af dropdown liste */
-.dropdown li {
-    border-style: solid;
-    border-width: 0 0 0.15rem 0;
-    border-color: var(--sekundaer-lyseroed);
-    width: 95%;
-}
-
-/* styling af dropdown-lister */
-ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-}
-
-ul li a {
-    display: block; 
-    padding: 1rem 0.5rem;
-}
 
 
 /*----------------------------------------------*/
 
-
- /* STYLING AF LISTEDE ELEMENTER - LI */
+/* STYLING AF LISTEDE ELEMENTER - LI */
 
 /* layout af listede elementer */
 .dropdown-styling {
     display: flex;
-    justify-content: right; /* placerer menuen i højre side */
+    justify-content: left; /* placerer menuen i venstre side */
     padding-left: 1rem; /*luft mellem elementer */
-    padding-right: 1.5rem;
-    width: auto;
- }
-
- /* styling af tekst, i under-listede elementer*/
- li {
-    display: flex;
-    text-align: right;
-    right: 0;
+    padding-right: 1rem; /*luft mellem elementer */
+    width: 100%; /* Fylder hele skærmen ud */
+    border-bottom: 0.5px solid var(--sort);
 }
+
+/* styling af tekst, i under-listede elementer*/
 
 /* styling af listede elementer*/
 nav li { 
@@ -144,6 +119,17 @@ nav li {
 li:first-child { /* first-child, fordi logo er første element i listede elementer. Denne skal være placeret anderledes. */
     margin-right: auto;
     display: block; /* sikrer at logo altid vises, selvom andre listede elementer er skjult*/
+}
+
+ul {
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    list-style: none; /* fjerner prikker fra listede elementer */
+}
+
+ul li a {
+    display: block; 
+    padding: 1rem 0.5rem; /* Afstand 1rem til top og bund. Afstand til siderne*/
 }
 
 /* styling af logo-img */
@@ -161,14 +147,13 @@ li:first-child { /* first-child, fordi logo er første element i listede element
 }
   
 .bar1, .bar2, .bar3 {
-    width: 35px; /* Bredden på burgermenuens streger */
-    height: 5px; /* Tykkelsen på burgermenuens streger */
-    background-color: #333; /* Udfyldt farve af burgermenuens streger */
-    margin: 6px 0; /* Afstanden mellem hver bar */
+    width: 35px; /* Bredden på burgermenuens bar */
+    height: 3px; /* Tykkelsen på burgermenuens bar */
+    background-color: var(--sort); /* Udfyldt farve af burgermenuens bar */
+    margin: 8px 0; /* Afstanden mellem hver bar */
     transition: 0.4s; /* Tiden overgangen tager */
     border-radius: 2rem; /* Afrundet kanter */
 }
-  
 .change .bar1 {
     transform: translate(0, 11px) rotate(-45deg); /* Rotere første bar */
 }
@@ -180,5 +165,135 @@ li:first-child { /* first-child, fordi logo er første element i listede element
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg); /* Rotere sidste bar */
 }
-  
 /*---------------------------------------------*/
+/*  */
+/* FOOTER */
+footer {
+    background-color: #B2AC88;
+    width: 100%; /* Fylder hele skærmen ud */
+    padding: 2.5rem 2.5rem 1rem; /* Afstand rundet om elementerne i rem, så det er responsivt */
+    color: var(--hvid); /* Gør skriften hvid */
+}
+  
+.footerContainer {
+    display: flex;
+    justify-content: space-between; /* Placerer elementerne i hver side af skærmen */
+}
+  
+.footerAdresse p {
+    padding: 3px; /* Afstand mellem teksten */
+}
+  
+.footerSocialemedier {
+    list-style: none; /* Fjerner prikker fra listede elementer */
+    display: flex;
+    flex-direction: row; /* Placerer elementerne i på række */ 
+}
+.footerSocialemedier img {
+    width: 1.6rem; /* Definere størrelsen på ikonerne */
+    height: auto;
+    margin: 6px; /* Luft omrking hvert element */
+}
+ /*  */
+.footerBottom {
+    padding-top: 1.5rem;  /* Afstand til footerContainer over */
+    text-align: center;  /* Placerer teksten i midten */
+}
+
+/*---------------------------------------------*/
+/* STYLING AF MAIN */
+main{
+    margin-top: 5.7rem;  /* Rykker det ud under fra headeren */
+}
+
+.pic {
+    width: 100%;
+}
+
+
+/*---------------------------------------------*/
+/* STYLING AF ØL */
+
+.beerHeader {
+    position: relative;
+}
+
+.beerHeader img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-tekst {
+    position: absolute;
+    top: 50%; /* sikrer placering i midten, både vertikalt og horisontalt i forhold til det omsluttende billede. */
+    left: 50%; /* sikrer placering i midten */
+    transform: translate(-50%, -50%); /* Transform-funktionen bruges til at finjustere placeringen */
+    padding: 1rem; /* Luft omkring tekst */
+    color: var(--hvid); /* Gør skriften hvid */
+    text-align: center; /* Placerer teksten i midten */
+}
+/*  */
+.overlay-tekst h2 {
+    font-size: 6rem;
+    padding: 2.5rem; /* Luft omkring tekst */
+}
+
+.overlay-tekst p {
+    line-height: 1.8rem; /*linjeafstand*/
+}
+
+/*---------------------------------------------*/
+
+/* RESPONSIVE - MEDIA QUERIES */
+
+
+/* FOR MOBILE VIEW */
+@media only screen and (max-width: 320px) {
+    /* STYLING AF FOOTER */
+    .footerSocialemedier {
+        flex-direction: column;  /* Placerer elementerne i en kolonne */
+    }
+    .footerSocialemedier img {
+        margin: 3px;  /* Luften omkring elementerne */
+    }
+}
+
+/* FOR DESKTOP VIEW */
+@media only screen and (min-width: 768px) {
+    /* STYLING AF NAVIGATION */
+    nav {
+        border-bottom: 0.5px solid var(--sort);  /* Placere en streg under header */
+    }
+    .nav-toggle {
+        display: none; /* skjuler bar-img i desktop view */
+    }
+
+    .nav-menu {
+        flex-direction: row; /* ændrer opstilling/retning på listede elementer i nav */
+        /* styling af navigationsbar */
+        display: flex;
+        right: 0; /* placerer elementet helt til højre */
+        margin: 0.5rem; /* Afstand omkring */
+        z-index: 100;
+    }
+
+    .dropdown-styling {
+        margin-top: 0.5rem; /* gør teksten på linje med logo (midten) */
+        margin-bottom: 0.5rem; /* gør giver sammen afstand som top til tekst til tekst til bund */
+        border-bottom: none; /* Fjerne stregen under hvert element */
+    }
+
+    nav li {
+        display: block; /* gør listede elementer synlige */
+    }
+
+    a {
+        font-size: 0.9rem; /* tilpasser tekst størrelsen skærmstørrelsen */
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    a {
+        font-size: 1rem; /* tilpasser tekst størrelsen skærmstørrelsen */
+    }
+}
