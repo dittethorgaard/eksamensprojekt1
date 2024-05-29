@@ -14,6 +14,7 @@
     --sort: #000;
     --hvid: #ffffff;
     --navigationsbar: #ffffff;
+    --baggrundsfarve: #f5f5f5;
 }
 
 a {
@@ -35,6 +36,9 @@ a {
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    background-color: var(--baggrundsfarve);
+}
 
 /*------------------------------------------*/
 
@@ -214,15 +218,18 @@ main{
 /*---------------------------------------------*/
 /* STYLING AF ØL */
 
-.beerHeader {
+/* Styling af velkomst billed */
+.billed-container-top {
     position: relative;
 }
 
-.beerHeader img {
+.billed-container-top img {
+    display: block;
     width: 100%;
-    height: auto;
+    object-fit: cover;
 }
 
+/* Styling af tekst over billed */
 .overlay-tekst {
     position: absolute;
     top: 50%; /* sikrer placering i midten, både vertikalt og horisontalt i forhold til det omsluttende billede. */
@@ -232,14 +239,41 @@ main{
     color: var(--hvid); /* Gør skriften hvid */
     text-align: center; /* Placerer teksten i midten */
 }
-/*  */
-.overlay-tekst h2 {
-    font-size: 6rem;
-    padding: 2.5rem; /* Luft omkring tekst */
+
+.overlay-heading {
+    font-size: 2rem; /* Tekst størrelsen */
+    font-weight: 400; /* Tykkelsen af teksten */
 }
 
-.overlay-tekst p {
+.overlay-bodytext {
     line-height: 1.8rem; /*linjeafstand*/
+    font-weight: 200; /* Tykkelsen af teksten */
+}
+
+/* bodytext - teksten under billedet */
+.beer-bodytext {
+    display: flex;
+    justify-content: center; /* Placerer tekstboksen i midten */
+    text-align: center; /* Placere teksen i midten */
+    padding: 3rem; /* Luft omkring tekstboksen */
+}
+
+/* Produkt galleri */
+.products-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    padding: 1.5rem;  /* Luft omkring */
+}
+
+.products-gallery img {
+    width: 100%;  /* Størrelsen på billedet */
+    height: auto; 
+    
+}
+
+.product-description {
+    text-align: center;  /* Placerer teksten i midten */
 }
 
 /*---------------------------------------------*/
@@ -257,6 +291,13 @@ main{
         margin: 3px;  /* Luften omkring elementerne */
     }
 }
+
+@media only screen and (max-width: 425px) {
+    .overlay-bodytext {
+        display: none; /* Fjerne teksten, da jeg synes det ikke passer til mobil layout */
+    }
+}
+
 
 /* FOR DESKTOP VIEW */
 @media only screen and (min-width: 768px) {
@@ -290,10 +331,58 @@ main{
     a {
         font-size: 0.9rem; /* tilpasser tekst størrelsen skærmstørrelsen */
     }
+
+ /* ØL */
+    .overlay-heading {
+        font-size: 3rem; /* Tekstens størrelse */
+        font-weight: 400; /* Tykkelsen på teksen */
+    }
+
+    .overlay-bodytext {
+        font-size: 1.25rem; /* Tekstens størrelse */
+    }
+
+    /* Produkt galleri */
+    .products-gallery-row {
+        display: flex;
+        flex-flow: row wrap; /* Placerer elementerne på en række med 'row' og med 'wrap' pakker elementerne på flere linjer. */
+        justify-content: center; /* Placerer elementerne i midten */
+    }
+
+    .products-gallery {
+        width: 50%; /* Størrelsen på elementerne */
+    }
+
+    .product-description {
+        padding: 2rem; /* Luft omkring teksten */
+    }
 }
+
+
 
 @media only screen and (min-width: 769px) {
     a {
         font-size: 1rem; /* tilpasser tekst størrelsen skærmstørrelsen */
+    }
+
+ /* ØL */
+    .overlay-heading {
+        font-size: 4rem; /* Tekstens størrelsen */
+    }
+
+    .overlay-bodytext {
+        font-size: 1.5rem; /* Tekstens størrelsen */
+        line-height: 2.3rem; /* Linjeafstand */
+    }
+
+    /* Produkt galleri */
+    .products-gallery-row {
+        display: flex;
+        flex-flow: row wrap; /* Placerer elementerne på en række med 'row' og med 'wrap' pakker elementerne på flere linjer. */
+        justify-content: center; /* Placerer elementerne i midten */
+    }
+
+    .products-gallery {
+        width: 25%; /* Størrelsen på elementerne */
     }
 }
