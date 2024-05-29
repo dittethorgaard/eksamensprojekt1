@@ -38,11 +38,12 @@ a {
 
 body {
     background-color: var(--baggrundsfarve);
+    font-family: "Montserrat", sans-serif;
 }
 
-/*------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
-/* FUNKTIONER / STYLING AF NAVIGATIONSBAR */
+/* NAVIGATIONSBAR STYLING */
 
 /* Styling af nav-tag */
 nav {
@@ -95,12 +96,6 @@ a:active {
     background-color: var(--hvid); /* giver aktiverede links en mørkere baggrundsfarve:*/
 }
 
-
-
-/*----------------------------------------------*/
-
-/* STYLING AF LISTEDE ELEMENTER - LI */
-
 /* layout af listede elementer */
 .dropdown-styling {
     display: flex;
@@ -143,8 +138,8 @@ ul li a {
 }
 
 
-/*---------------------------------------------*/
-/* Burgermenu Knappen */
+/*------------------------------------------------------------------------------------------*/
+/* Burgermenu Knappen STYLING */
 .burgermenu-knap {
     display: inline-block; /* Giver mulighed for at indstille en bredde og højde på elementet */
     cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
@@ -169,9 +164,9 @@ ul li a {
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg); /* Rotere sidste bar */
 }
-/*---------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 /*  */
-/* FOOTER */
+/* FOOTER STYLING */
 footer {
     background-color: #B2AC88;
     width: 100%; /* Fylder hele skærmen ud */
@@ -204,7 +199,7 @@ footer {
     text-align: center;  /* Placerer teksten i midten */
 }
 
-/*---------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
 /* STYLING AF MAIN */
 main{
     margin-top: 5.7rem;  /* Rykker det ud under fra headeren */
@@ -214,9 +209,8 @@ main{
     width: 100%;
 }
 
-
-/*---------------------------------------------*/
-/* STYLING AF ØL */
+/*------------------------------------------------------------------------------------------*/
+/* ØL STYLING */
 
 /* Styling af velkomst billed */
 .billed-container-top {
@@ -276,7 +270,75 @@ main{
     text-align: center;  /* Placerer teksten i midten */
 }
 
-/*---------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
+/* EVENTS STYLING */
+
+/* Overskrift */
+.events-heading h1 {
+    display: flex;
+    justify-content: center; /* Placerer tekstboksen i midten */
+    text-align: center; /* Placere teksen i midten */
+    padding: 3rem; /* Luft omkring tekstboksen */
+    font-weight: 500;
+}
+
+/* events dele */
+.events-del {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    padding: 1rem 1rem; /* Luft omkring */
+
+}
+
+.events-del img {
+    width: 100%;  /* Størrelsen på billedet */
+    height: auto; 
+    border-radius: 2rem; /* Afrundet kanter */
+}
+
+.events-description {
+    text-align: center;  /* Placerer teksten i midten */
+    padding-top: 1rem; /* Afstand mellem billed og tekst under */
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+
+/* OM OS STYLING */
+
+/* Overskrift */
+.about-us-heading h1 {
+    display: flex;
+    justify-content: center; /* Placerer tekstboksen i midten */
+    text-align: center; /* Placere teksen i midten */
+    padding: 3rem; /* Luft omkring tekstboksen */
+    font-weight: 500;
+}
+
+/* events dele */
+.about-us-del {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    padding: 1rem 1rem; /* Luft omkring */
+
+}
+
+.about-us-del img {
+    width: 100%;  /* Størrelsen på billedet */
+    height: auto; 
+    border-radius: 2rem; /* Afrundet kanter */
+}
+
+.about-us-description {
+    text-align: center;  /* Placerer teksten i midten */
+    padding-top: 1rem; /* Afstand mellem billed og tekst under */
+}
+
+
+/*------------------------------------------------------------------------------------------*/
 
 /* RESPONSIVE - MEDIA QUERIES */
 
@@ -356,6 +418,24 @@ main{
     .product-description {
         padding: 2rem; /* Luft omkring teksten */
     }
+
+/* EVENTS */
+
+    /* Events dele */
+    .events-row {
+        display: flex;
+        flex-flow: row wrap; /* Placerer elementerne på en række med 'row' og med 'wrap' pakker elementerne på flere linjer. */
+        justify-content: center; /* Placerer elementerne i midten */
+    }
+
+    .events-del {
+        width: 50%; /* Størrelsen på elementerne */
+    }
+
+    .events-description {
+        padding: 2rem; /* Luft omkring teksten */
+    }
+
 }
 
 
@@ -383,6 +463,18 @@ main{
     }
 
     .products-gallery {
+        width: 25%; /* Størrelsen på elementerne */
+    }
+
+/* EVENTS */
+    /* events dele */
+    .events-row {
+        display: flex;
+        flex-flow: row wrap; /* Placerer elementerne på en række med 'row' og med 'wrap' pakker elementerne på flere linjer. */
+        justify-content: center; /* Placerer elementerne i midten */
+    }
+
+    .events-del {
         width: 25%; /* Størrelsen på elementerne */
     }
 }
