@@ -71,7 +71,7 @@ nav {
 
 /* styling af burgermenu - bar */
 .menu {
-    margin: 1.5rem 1rem 1rem 1rem; /* placering af bar fra top */
+    margin: 1.5rem; /* placering af bar fra top */
     right: 0; /* placerer elementet helt til højre */
     position: relative;
 }
@@ -306,10 +306,10 @@ main{
 
 /*------------------------------------------------------------------------------------------*/
 
-/* OM OS STYLING */
+/* BRYGHUSET STYLING */
 
 /* Overskrift */
-.about-us-heading h1 {
+.brewery-heading h1 {
     display: flex;
     justify-content: center; /* Placerer tekstboksen i midten */
     text-align: center; /* Placere teksen i midten */
@@ -317,24 +317,27 @@ main{
     font-weight: 500;
 }
 
-/* events dele */
-.about-us-del {
-    width: 100%;
+.brewery-history {
     display: flex;
-    flex-direction: column; /* Placerer elementerne i en kolonne */
-    padding: 1rem 1rem; /* Luft omkring */
-
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem 3rem 3rem;
 }
 
-.about-us-del img {
-    width: 100%;  /* Størrelsen på billedet */
-    height: auto; 
-    border-radius: 2rem; /* Afrundet kanter */
+.brewery-history1 {
+    padding-bottom: 3.5rem;
 }
 
-.about-us-description {
-    text-align: center;  /* Placerer teksten i midten */
-    padding-top: 1rem; /* Afstand mellem billed og tekst under */
+.brewery-history h4 {
+    text-align:left;
+    font-weight: 600;
+    font-style: bold;
+}
+
+.brewery-history p {
+    font-weight: 200;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 
