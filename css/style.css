@@ -340,33 +340,54 @@ main{
     padding-bottom: 2rem;
 }
 
+.brewery-img1 {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-radius: 1.75rem 6rem 0 6rem;
+}
+
+.brewery-img2 {
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-radius: 6rem 1.75rem 6rem 0;
+}
 
 /*------------------------------------------------------------------------------------------*/
 
 /* RESPONSIVE - MEDIA QUERIES */
 
 
-/* FOR MOBILE VIEW */
+/* FOR MOBILE VIEW - LILLE MOBIL*/
 @media only screen and (max-width: 320px) {
-    /* STYLING AF FOOTER */
+ /* STYLING AF FOOTER */
     .footerSocialemedier {
         flex-direction: column;  /* Placerer elementerne i en kolonne */
     }
     .footerSocialemedier img {
         margin: 3px;  /* Luften omkring elementerne */
     }
+    footer {
+        font-size: 0.5rem;
+    }
 }
 
+/* FOR MOBILE VIEW - STOR MOBIL*/
 @media only screen and (max-width: 425px) {
+ /* FOOTER */
+    footer {
+        font-size: 0.8rem;
+    }
+ /* ØL */
     .overlay-bodytext {
         display: none; /* Fjerne teksten, da jeg synes det ikke passer til mobil layout */
     }
 }
 
 
+
 /* FOR DESKTOP VIEW */
 @media only screen and (min-width: 768px) {
-    /* STYLING AF NAVIGATION */
+ /* STYLING AF NAVIGATION */
     nav {
         border-bottom: 0.5px solid var(--sort);  /* Placere en streg under header */
     }
@@ -422,7 +443,7 @@ main{
         padding: 2rem; /* Luft omkring teksten */
     }
 
-/* EVENTS */
+ /* EVENTS */
 
     /* Events dele */
     .events-row {
@@ -438,7 +459,13 @@ main{
     .events-description {
         padding: 2rem; /* Luft omkring teksten */
     }
-
+ /* BREWERY */
+    .brewery-history img {
+        width: 75%;
+        display: flex;
+        align-self: center;
+        padding-bottom: 2.5rem;
+    }
 }
 
 
@@ -469,7 +496,7 @@ main{
         width: 25%; /* Størrelsen på elementerne */
     }
 
-/* EVENTS */
+ /* EVENTS */
     /* events dele */
     .events-row {
         display: flex;
@@ -480,4 +507,12 @@ main{
     .events-del {
         width: 25%; /* Størrelsen på elementerne */
     }
+
+ /* BREWERY */
+    .brewery-history img {
+        width: 65%;
+        display: flex;
+        align-self: center;
+        padding-bottom: 2.5rem;
+    }   
 }
