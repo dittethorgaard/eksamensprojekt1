@@ -13,10 +13,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
+    <!-- Google pil -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!-- pil mod venstre -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> <!-- pil mod højre -->
 
 </head>
 
 <body>
+
 <header> <!--Navigationsbar & logo-->
     <nav class="nav"> 
         <input type="checkbox" id="nav-checkbox" class="nav-checkbox"> <!--id skal bruges til checkboksens funktion, class skal style elementerne -->
@@ -44,17 +48,39 @@
         </ul>
     </nav>
 </header>
+
 <main>
-    <section >
-        <img src="images/stor-logo.webp" alt="stor-logo" class="pic">
+    <section class="forside-velkomst">
+        <img src="images/stor-logo.webp" alt="stor-logo" class="forside-logo">
+        <h1>ALKOHOLFRI ØL </h1>
+        <p>den nye del af fælleskabet</p>
+    </section>
+
+    <section class="forside-nyhed">
+        <h2>NYHEDER</h2>
+        <section class="slider-wrapper">
+            <section class="image-list">
+                <li><a href="beers.html"> <img src="images/nyhed-øl.webp" alt="Nyhed - new england ipa" class="image-item"></a></li>
+                <li><a href="#"> <img src="images/nyhed-festival.webp" alt="Nyhed - festival" class="image-item"></a></li>
+            </section>
+        </section>
+    </section>
+
+    <section class="forside-events">
+
+    </section>
+
+
+    <section class="forside-brewery">
+
     </section>
 </main>
+
 <footer>
     <section class="footerContainer">
-
         <section class="footerAdresse">
             <p>ZeroBuzz Brew</p>
-            <p>Ormslevvej 155</p>
+            <p>Ringvej Syd 104</p>
             <p>8260 Viby J</p>
             <p>Mail: zerobuzzbrew@mail.com</p>
             <p>Telefon: 12 34 56 78</p>
@@ -71,13 +97,11 @@
                 <img src="images/x-icon.webp" alt="x-icon">
             </a></li>
         </section>
-    
     </section>
 
     <section class="footerBottom">
         <p>Copyright &copy; 2024; Rettighederne tilhører ZeroBuzz Brew</p>
     </section>
-
 </footer>
 
 <script src="js/script.js"></script>

@@ -1,12 +1,3 @@
-/* / <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
-
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
 
 
 /* Definerer de mest brugte farver og andre elementer i koden */
@@ -20,9 +11,9 @@
 a {
     text-decoration: none; /* fjerner streger under links */
     color: inherit; /* fjerner den blå farve i links */
-    font-size: 1rem;
-    font-weight: 300;
-    font-family: "Montserrat", sans-serif;
+    font-size: 1rem; /* Skriftstørrelse */
+    font-weight: 300; /* Skrifttykkelse */
+    font-family: "Montserrat", sans-serif; /* Skrifttype */
 }
 
 
@@ -37,22 +28,25 @@ a {
 }
 
 body {
-    background-color: var(--baggrundsfarve);
-    font-family: "Montserrat", sans-serif;
+    background-color: var(--baggrundsfarve); /* Baggrundsfarve */
+    font-family: "Montserrat", sans-serif; /* Skrifttype */
 }
 
+main{
+    margin-top: 5.7rem;  /* Rykker det ud under fra headeren */
+}
 /*---------------------------------------------------------------------------------------*/
 
 /* NAVIGATIONSBAR STYLING */
 
 /* Styling af nav-tag */
 nav {
-    font-weight: 300;
+    font-weight: 300; /* Skrifttype */
     position: fixed; /* sikrer at nav følger skærmen, når der scrolles nedad */
     width: 100%; /* Fylder hele skærmen ud */
     top: 0; /* Placerer navigationen øverst på skærmen */
     z-index: 999; /* Høj z-index-værdi for at sikre, at det vises over andre elementer */
-    background-color: var(--navigationsbar);
+    background-color: var(--navigationsbar); /* Baggrundsfarve */
 }
 
 /* styling af den egentlige checkboks */
@@ -64,7 +58,7 @@ nav {
 .nav-toggle {
     position: absolute;
     cursor: pointer;
-    margin: 0rem 1rem;
+    margin: 0rem 1rem; /* Luft over til siderne */
     right: 0; /* placerer elementet helt til højre */
     z-index: 1000; /* Sørger for, at burgermenu-ikonet vises over alt andet */
 }
@@ -103,7 +97,7 @@ a:active {
     padding-left: 1rem; /*luft mellem elementer */
     padding-right: 1rem; /*luft mellem elementer */
     width: 100%; /* Fylder hele skærmen ud */
-    border-bottom: 0.5px solid var(--sort);
+    border-bottom: 0.5px solid var(--sort); /* Streg under hvert element i dropdown-menu */
 }
 
 /* styling af tekst, i under-listede elementer*/
@@ -168,7 +162,7 @@ ul li a {
 /*  */
 /* FOOTER STYLING */
 footer {
-    background-color: #B2AC88;
+    background-color: #B2AC88; /* Baggrundsfarve på footer */
     width: 100%; /* Fylder hele skærmen ud */
     padding: 2.5rem 2.5rem 1rem; /* Afstand rundet om elementerne i rem, så det er responsivt */
     color: var(--hvid); /* Gør skriften hvid */
@@ -200,13 +194,56 @@ footer {
 }
 
 /*------------------------------------------------------------------------------------------*/
-/* STYLING AF MAIN */
-main{
-    margin-top: 5.7rem;  /* Rykker det ud under fra headeren */
+
+/* FORSIDE STYLING */
+.forside-logo {
+    width: 100%; /* Størrelse på logo */
+    padding: 2rem 3.5rem 2rem 3.5rem; /* Luft omkring logo */
+    display: flex;
+    justify-content: center; /* Placering i midten */
+}
+.forside-velkomst {
+    display: flex;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    align-items: center; /* Placerer elementerne i midten */
+    padding-bottom: 3.5rem; /* Afstand til næste section under */
+}
+.forside-velkomst h1 {
+    font-weight: 400; /* Skrifttykkelse */
 }
 
-.pic {
-    width: 100%;
+.forside-nyhed {
+    padding: 3rem 2rem 3.5rem 2rem; /* Afstand rundt om sectionen */
+}
+.forside-nyhed{
+    list-style: none;
+}
+.forside-nyhed h2 {
+    display: flex;
+    justify-content: center; /* Placerer overskriften i midten */
+    font-weight: 300; /* Skriftykkelsen */
+}
+
+/* billed-slide */
+.image-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scrollbar-width: 50%;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 20.3rem;
+    height: 25rem;
+    object-fit: cover;
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -356,7 +393,6 @@ main{
 
 /* RESPONSIVE - MEDIA QUERIES */
 
-
 /* FOR MOBILE VIEW - LILLE MOBIL*/
 @media only screen and (max-width: 320px) {
  /* STYLING AF FOOTER */
@@ -417,6 +453,19 @@ main{
     a {
         font-size: 0.9rem; /* tilpasser tekst størrelsen skærmstørrelsen */
     }
+
+ /* FORSIDE */
+    
+    .forside-logo {
+        width: 35%;
+    }
+
+    .slider-wrapper .image-list {
+        gap: 3rem;
+    }
+
+
+
 
  /* ØL */
     .overlay-heading {
