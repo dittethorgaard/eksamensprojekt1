@@ -57,7 +57,7 @@ nav {
 /* placering af burgermenu - bar */
 .nav-toggle {
     position: absolute;
-    cursor: pointer;
+    cursor: pointer; /* Ændre mussen til et pointer */
     margin: 0rem 1rem; /* Luft over til siderne */
     right: 0; /* placerer elementet helt til højre */
     z-index: 1000; /* Sørger for, at burgermenu-ikonet vises over alt andet */
@@ -183,6 +183,7 @@ footer {
     flex-direction: row; /* Placerer elementerne i på række */ 
 }
 .footerSocialemedier img {
+    cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
     width: 1.6rem; /* Definere størrelsen på ikonerne */
     height: auto;
     margin: 6px; /* Luft omrking hvert element */
@@ -211,12 +212,12 @@ footer {
 .forside-velkomst h1 {
     font-weight: 400; /* Skrifttykkelse */
 }
-
+/*  */
 .forside-nyhed {
     padding: 3rem 2rem 3.5rem 2rem; /* Afstand rundt om sectionen */
 }
 .forside-nyhed{
-    list-style: none;
+    list-style: none; /* Fjerner prikkerne fra listede elementer */
 }
 .forside-nyhed h2 {
     display: flex;
@@ -224,40 +225,32 @@ footer {
     font-weight: 300; /* Skriftykkelsen */
 }
 
-/* billed-slide */
-.image-list {
+/* Styling af nyhed billederne */
+.forside-nyhed-billeder {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
+    justify-content: center; /* Placerer elementeren i midten */
+    align-items: center; /* Placerer elementerne i midten */
+    flex-direction: column; /* Placerer elementerne i en kolonne */
 }
 
-.slider-wrapper .image-list {
-    display: grid;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scrollbar-width: 50%;
-    grid-template-columns: repeat(2,1fr);
+.forside-nyhed-img {
+    width: 100%; /* Størrelsen på billederne */
+    padding: 1rem; /* Afstand rundt om billederne */
+    cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
 }
-
-.slider-wrapper .image-list .image-item {
-    width: 20.3rem;
-    height: 25rem;
-    object-fit: cover;
-}
-
 /*------------------------------------------------------------------------------------------*/
 /* ØL STYLING */
 
 /* Styling af velkomst billed */
 .billed-container-top {
-    position: relative;
+    position: relative; /* Har ikke styr på hvad dette betyder??? */
 }
 
 .billed-container-top img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+    display: block; /* Har ikke styr på hvad dette betyder??? */
+    width: 100%; /* Størrelsen på billedet */
+    object-fit: cover; /* Har ikke helt styr på hvad det betyder??? */
+    /* Ville gerne have at billedet kunne gøre lige som på Jakobsen - øl website, men kunne ikke regne ud hvordan det var gjort eller finde ud af hvordan jeg kunne gøre det :( */
 }
 
 /* Styling af tekst over billed */
@@ -317,16 +310,21 @@ footer {
     justify-content: center; /* Placerer tekstboksen i midten */
     text-align: center; /* Placere teksen i midten */
     padding: 3rem; /* Luft omkring tekstboksen */
-    font-weight: 500;
+    font-weight: 500; /* Tykkelsen på teksten */
+}
+/*  */
+.upcoming {
+    text-align: center; /* Placere teksten i midten af skærmen */
+    padding: 1.5rem; /* Afstand rundt omkring teksten */
+    cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
 }
 
 /* events dele */
 .events-del {
-    width: 100%;
+    width: 100%; /* Størrelsen på elementerne */
     display: flex;
     flex-direction: column; /* Placerer elementerne i en kolonne */
-    padding: 1rem 1rem; /* Luft omkring */
-
+    padding: 1rem 1rem; /* Luft omkring elementerne */
 }
 
 .events-del img {
@@ -351,42 +349,42 @@ footer {
     justify-content: center; /* Placerer tekstboksen i midten */
     text-align: center; /* Placere teksen i midten */
     padding: 3rem; /* Luft omkring tekstboksen */
-    font-weight: 500;
+    font-weight: 500; /* Tykkelsen på teksten */
 }
 
 .brewery-history {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 3rem 3rem 3rem;
+    flex-direction: column; /* Placerer elementerne i en kolonne */
+    justify-content: center; /* Placerer elementerne i midten */
+    padding: 0 3rem 3rem 3rem; /* Afstand rundt om  */
 }
 
 .brewery-history1 {
-    padding-bottom: 3.5rem;
+    padding-bottom: 3.5rem; /* Afstand til næste element under */
 }
 
 .brewery-history h4 {
-    text-align:left;
-    font-weight: 600;
-    font-style: bold;
+    text-align:left; /* Placerer overskriften til venstre */
+    font-weight: 600; /* Tykkelsen på overskriften */
+    font-style: bold; /* Gør teksten tyk */
 }
 
 .brewery-history p {
-    font-weight: 200;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    font-weight: 200; /* Tykkelsen på teksten */
+    padding-top: 1rem; /* Afstand til forrige element over */
+    padding-bottom: 2rem; /* Afstand til næste element under */
 }
 
 .brewery-img1 {
-    width: 100%;
-    padding-bottom: 1.5rem;
-    border-radius: 1.75rem 6rem 0 6rem;
+    width: 100%; /* Størrelsen på billedet */
+    padding-bottom: 1.5rem; /* Afstand til næste element under */
+    border-radius: 1.75rem 6rem 0 6rem; /* Afrundede kanter */
 }
 
 .brewery-img2 {
-    width: 100%;
-    padding-bottom: 1.5rem;
-    border-radius: 6rem 1.75rem 6rem 0;
+    width: 100%; /* Størrelsen på billedet */
+    padding-bottom: 1.5rem; /* Afstand til næste element under */
+    border-radius: 6rem 1.75rem 6rem 0; /* Afrundede kanter */
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -403,7 +401,7 @@ footer {
         margin: 3px;  /* Luften omkring elementerne */
     }
     footer {
-        font-size: 0.5rem;
+        font-size: 0.5rem; /* Tekststørrelsen */
     }
 }
 
@@ -411,8 +409,10 @@ footer {
 @media only screen and (max-width: 425px) {
  /* FOOTER */
     footer {
-        font-size: 0.8rem;
+        font-size: 0.8rem; /* Tekststørrelsen */
     }
+
+    
  /* ØL */
     .overlay-bodytext {
         display: none; /* Fjerne teksten, da jeg synes det ikke passer til mobil layout */
@@ -423,7 +423,7 @@ footer {
 
 /* FOR DESKTOP VIEW */
 @media only screen and (min-width: 768px) {
- /* STYLING AF NAVIGATION */
+ /* NAVIGATION */
     nav {
         border-bottom: 0.5px solid var(--sort);  /* Placere en streg under header */
     }
@@ -432,12 +432,12 @@ footer {
     }
 
     .nav-menu {
-        flex-direction: row; /* ændrer opstilling/retning på listede elementer i nav */
         /* styling af navigationsbar */
+        flex-direction: row; /* ændrer opstilling/retning på listede elementer i nav */
         display: flex;
         right: 0; /* placerer elementet helt til højre */
         margin: 0.5rem; /* Afstand omkring */
-        z-index: 100;
+        z-index: 100; /* Har ingen ide om hvad det betyder??? */
     }
 
     .dropdown-styling {
@@ -454,17 +454,22 @@ footer {
         font-size: 0.9rem; /* tilpasser tekst størrelsen skærmstørrelsen */
     }
 
+
+ /* FOOTER */
+    .footerSocialemedier img {
+        width: 2rem; /* Størrelsen af ikonerne */
+        margin: 0.75rem; /* Afstanden rundt om ikonerne  */
+    }
+
+
  /* FORSIDE */
-    
     .forside-logo {
-        width: 35%;
+        width: 35%; /* Størrelsen på logo */
     }
 
-    .slider-wrapper .image-list {
-        gap: 3rem;
+    .forside-nyhed-billeder {
+        flex-direction: row; /* Placerer nyhedsbillederne på en række */
     }
-
-
 
 
  /* ØL */
@@ -492,8 +497,8 @@ footer {
         padding: 2rem; /* Luft omkring teksten */
     }
 
- /* EVENTS */
 
+ /* EVENTS */
     /* Events dele */
     .events-row {
         display: flex;
@@ -508,21 +513,39 @@ footer {
     .events-description {
         padding: 2rem; /* Luft omkring teksten */
     }
+
+
  /* BREWERY */
     .brewery-history img {
-        width: 75%;
+        width: 75%; /* Størrelsen på billederne */
         display: flex;
-        align-self: center;
-        padding-bottom: 2.5rem;
+        align-self: center; /* Placerer billederne i midten */
+        padding-bottom: 2.5rem; /* Afstand til næste element under */
     }
 }
 
 
 
 @media only screen and (min-width: 769px) {
+ /* NAVIGATION */
     a {
         font-size: 1rem; /* tilpasser tekst størrelsen skærmstørrelsen */
     }
+
+
+ /* FOOTER */
+    .footerSocialemedier img {
+        width: 2.5rem; /* Størrelsen på ikonerne */
+        margin: 1rem; /* Afstanden rundt om ikonerne */
+    }
+
+
+ /* FORSIDE */
+    .forside-nyhed-img {
+        padding: 3rem; /* Afstand rundt om billeder */
+
+    }
+
 
  /* ØL */
     .overlay-heading {
@@ -545,6 +568,7 @@ footer {
         width: 25%; /* Størrelsen på elementerne */
     }
 
+
  /* EVENTS */
     /* events dele */
     .events-row {
@@ -557,11 +581,12 @@ footer {
         width: 25%; /* Størrelsen på elementerne */
     }
 
+
  /* BREWERY */
     .brewery-history img {
-        width: 65%;
-        display: flex;
-        align-self: center;
-        padding-bottom: 2.5rem;
+        width: 65%; /* Størrelsen på billederne */
+        display: flex; 
+        align-self: center; /* Placerer billederne i midten */
+        padding-bottom: 2.5rem; /* Afstand til næste element under */
     }   
 }
