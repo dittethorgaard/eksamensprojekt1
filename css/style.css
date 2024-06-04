@@ -177,18 +177,24 @@ footer {
     padding: 3px; /* Afstand mellem teksten */
 }
   
-.footerSocialemedier {
+.footerSocialemedier{
     list-style: none; /* Fjerner prikker fra listede elementer */
-    display: flex;
-    flex-direction: row; /* Placerer elementerne i på række */ 
 }
+
 .footerSocialemedier img {
     cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
     width: 1.6rem; /* Definere størrelsen på ikonerne */
     height: auto;
-    margin: 6px; /* Luft omrking hvert element */
 }
- /*  */
+
+.footerSocialemedier a {
+    padding: 3px;  /* Luft omkring ikonerne */
+}
+.footerSocialemedier ul{
+    display: flex;
+    flex-direction: row;
+}
+
 .footerBottom {
     padding-top: 1.5rem;  /* Afstand til footerContainer over */
     text-align: center;  /* Placerer teksten i midten */
@@ -393,7 +399,7 @@ footer {
 /* FOR MOBILE VIEW - LILLE MOBIL*/
 @media only screen and (max-width: 320px) {
  /* STYLING AF FOOTER */
-    .footerSocialemedier {
+    .footerSocialemedier ul {
         flex-direction: column;  /* Placerer elementerne i en kolonne */
     }
     .footerSocialemedier img {
@@ -411,6 +417,9 @@ footer {
         font-size: 0.8rem; /* Tekststørrelsen */
     }
 
+    .footerSocialemedier {
+        flex-direction: row;  /* Placerer elementerne i en kolonne */
+    }
 
  /* ØL */
     .overlay-bodytext {
@@ -457,7 +466,7 @@ footer {
  /* FOOTER */
     .footerSocialemedier img {
         width: 2rem; /* Størrelsen af ikonerne */
-        margin: 0.75rem; /* Afstanden rundt om ikonerne  */
+        margin: 0.25rem; /* Afstanden rundt om ikonerne  */
     }
 
 
@@ -535,7 +544,7 @@ footer {
  /* FOOTER */
     .footerSocialemedier img {
         width: 2.5rem; /* Størrelsen på ikonerne */
-        margin: 1rem; /* Afstanden rundt om ikonerne */
+        margin: 0.5rem; /* Afstanden rundt om ikonerne */
     }
 
 
