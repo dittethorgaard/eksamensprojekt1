@@ -366,7 +366,6 @@ footer {
 .brewery-history h4 {
     text-align:left; /* Placerer overskriften til venstre */
     font-weight: 600; /* Tykkelsen på overskriften */
-    font-style: bold; /* Gør teksten tyk */
 }
 
 .brewery-history p {
@@ -412,7 +411,7 @@ footer {
         font-size: 0.8rem; /* Tekststørrelsen */
     }
 
-    
+
  /* ØL */
     .overlay-bodytext {
         display: none; /* Fjerne teksten, da jeg synes det ikke passer til mobil layout */
