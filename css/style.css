@@ -232,15 +232,14 @@ footer {
 }
 
 /* Styling af nyhed billederne */
-.forside-nyhed-billeder {
+.forside-nyhed-billeder ul li a{
     display: flex;
-    justify-content: center; /* Placerer elementeren i midten */
-    align-items: center; /* Placerer elementerne i midten */
-    flex-direction: column; /* Placerer elementerne i en kolonne */
+    justify-content: center; /* Placerer billederne i midten */
 }
 
 .forside-nyhed-img {
-    width: 100%; /* Størrelsen på billederne */
+    
+    width: 80%; /* Størrelsen på billederne */
     padding: 1rem; /* Afstand rundt om billederne */
     cursor: pointer; /* Ændre mussenmarkøren til en pegemarkør */
 }
@@ -475,8 +474,12 @@ footer {
         width: 35%; /* Størrelsen på logo */
     }
 
-    .forside-nyhed-billeder {
-        flex-direction: row; /* Placerer nyhedsbillederne på en række */
+    .forside-nyhed-billeder img{
+        width: 80%; /* Størrelsen på billederne */
+    }
+    
+    .forside-nyhed-billeder ul {
+        flex-direction: row; /* Placerer billederne på en række */
     }
 
 
@@ -552,6 +555,9 @@ footer {
     .forside-nyhed-img {
         padding: 3rem; /* Afstand rundt om billeder */
 
+    }
+    .forside-nyhed-billeder img{
+        width: 90%; /* Størrelsen på billederne */
     }
 
 
